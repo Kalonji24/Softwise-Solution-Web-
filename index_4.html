@@ -83,6 +83,11 @@ input, textarea, select { font-family: inherit; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+     bottom: 0px;
+  }
+ 
 }
 
 .section {
@@ -322,7 +327,9 @@ input, textarea, select { font-family: inherit; }
   align-items: center;
   padding: 120px 0 80px;
   overflow: hidden;
-  background: linear-gradient(165deg, var(--white) 0%, var(--blue-50) 60%, #DCEEFB 100%);
+  background: linear-gradient(165deg, #90caf9 0%, var(--blue-50) 60%, #DCEEFB 100%);
+
+
 }
 
 .hero-bg-shapes {
@@ -454,7 +461,7 @@ input, textarea, select { font-family: inherit; }
   background: var(--gray-200);
 }
 
-/*
+
 .hero-scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -469,7 +476,7 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   animation: fadeIn 1s 1s ease both;
-}*/
+}
 
 
 
@@ -1631,7 +1638,10 @@ input, textarea, select { font-family: inherit; }
 
 @media (max-width: 768px) {
   .section { padding: 72px 0; }
-  .container { padding: 0 16px; }
+  .container { 
+    padding: 0 16px; 
+    bottom: 90px;
+  }
 
   .hamburger { display: flex; }
 
@@ -1725,11 +1735,7 @@ input, textarea, select { font-family: inherit; }
   .hero { min-height: auto; padding: 40px 0; }
   .section { padding: 40px 0; }
 }
-
-
 </style>
-
-
 
 <body>
 
@@ -1738,7 +1744,8 @@ input, textarea, select { font-family: inherit; }
     <div class="nav-container">
       <a href="#home" class="nav-logo">
         <div class="logo-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+            <img src="/Images/Logo Business.png" alt="SoftWise Solutions Logo" width="40" height="40" style="border-radius: 50%;"/>
             <circle cx="16" cy="16" r="15" stroke="#1565C0" stroke-width="2"/>
             <path d="M9 16C9 12.13 12.13 9 16 9s7 3.13 7 7-3.13 7-7 7" stroke="#1565C0" stroke-width="2" stroke-linecap="round"/>
             <circle cx="16" cy="16" r="3" fill="#1565C0"/>
@@ -1785,7 +1792,7 @@ input, textarea, select { font-family: inherit; }
         <span class="gradient-text">Real Results.</span>
       </h1>
       <p class="hero-description">
-        SoftWise Solutions engineers intelligent digital systems that scale your business, delight your customers, and future-proof your operations across Africa and beyond.
+        SoftWise Solutions builds smart digital systems that help businesses grow, improve customer experience, and run smoothly across Africa and beyond.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Book a Free Call</a>
@@ -1829,7 +1836,7 @@ input, textarea, select { font-family: inherit; }
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
           <h3>Websites Applications</h3>
-          <p>High-performance sites that connect an intuitive front end with a powerful back end, built to convert visitors into customers.</p>
+          <p>We build fast and easy-to-use websites that help turn visitors into customers.</p>
           <a href="#contact" class="service-link">Learn more <span>→</span></a>
         </div>
 
@@ -1838,7 +1845,7 @@ input, textarea, select { font-family: inherit; }
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <h3>Custom Software</h3>
-          <p>Bespoke software engineered to your exact business needs — scalable, secure, and built to last as you grow.</p>
+          <p>Software created to match how your business works — scalable, secure, and built to last as you grow.</p>
           <a href="#contact" class="service-link">Learn more <span>→</span></a>
         </div>
 
@@ -1856,7 +1863,7 @@ input, textarea, select { font-family: inherit; }
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           </div>
           <h3>Scalable Backend</h3>
-          <p>Robust infrastructure with real-time processing, cloud-ready architecture, and APIs that handle millions of requests.</p>
+          <p>We build reliable backend systems that can grow and handle many users at the same time.</p>
           <a href="#contact" class="service-link">Learn more <span>→</span></a>
         </div>
 
@@ -1865,7 +1872,7 @@ input, textarea, select { font-family: inherit; }
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3>Mobile Applications</h3>
-          <p>Cross-platform iOS and Android apps that deliver seamless, native-quality experiences your users will love.</p>
+          <p>Cross-platform apps for both iOS and Android that are easy to use and loved by your users.</p>
           <a href="#contact" class="service-link">Learn more <span>→</span></a>
         </div>
 
@@ -1911,7 +1918,7 @@ input, textarea, select { font-family: inherit; }
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
             </div>
             <h3>Design</h3>
-            <p>We create intuitive wireframes and pixel-perfect interfaces that balance aesthetics with usability.</p>
+            <p>Our design approach combines strategic wireframing with precise execution to create interfaces that are both visually compelling and highly functional.</p>
           </div>
         </div>
         <div class="process-connector"></div>
@@ -1923,7 +1930,7 @@ input, textarea, select { font-family: inherit; }
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
             <h3>Build</h3>
-            <p>Agile sprints with transparent progress updates. You see working software every two weeks, not just reports.</p>
+            <p>Agile sprints with transparent progress updates. You will see working software every two weeks, not just reports.</p>
           </div>
         </div>
         <div class="process-connector"></div>
@@ -2180,7 +2187,9 @@ input, textarea, select { font-family: inherit; }
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"SoftWise transformed our operations with a custom inventory system. We saved 15 hours per week and reduced errors by 80%. Truly game-changing."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">TM</div>
+            <div class="author-avatar">
+              <img src="/Images/Thabo Mokoena.png" alt="Thabo Mokoena" style="border-radius: 20px; width:100%; height:100%;" />
+            </div>
             <div>
               <strong>Thabo Mokoena</strong>
               <span>CEO, FreshStock Distributors</span>
@@ -2192,7 +2201,9 @@ input, textarea, select { font-family: inherit; }
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"The e-commerce platform they built tripled our online sales in six months. Their team understood our business needs from day one."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">AN</div>
+            <div class="author-avatar">
+              <img src="/Images/Amara Nkosi.png" alt="Amara Nkosi" style="border-radius: 20px; width:100%; height:100%;" />
+            </div>
             <div>
               <strong>Amara Nkosi</strong>
               <span>Founder, StyleHaus</span>
@@ -2204,7 +2215,9 @@ input, textarea, select { font-family: inherit; }
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"From concept to launch in 8 weeks. The analytics dashboard gives us real-time insights we never had before. Exceptional team and delivery."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">SP</div>
+            <div class="author-avatar">
+              <img src="/Images/Sarah Petersen.png" alt="Sarah Petersen" style="border-radius: 20px; width:100%; height:100%;" />
+            </div>
             <div>
               <strong>Sarah Petersen</strong>
               <span>COO, MediTrack Health</span>
@@ -2384,7 +2397,8 @@ input, textarea, select { font-family: inherit; }
         <div class="footer-brand">
           <div class="nav-logo footer-logo">
             <div class="logo-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+                <img src="/Images/Logo Business.png" alt="SoftWise Solutions Logo" width="40" height="40" style="border-radius: 50%;"/>
                 <circle cx="16" cy="16" r="15" stroke="white" stroke-width="2" opacity="0.7"/>
                 <path d="M9 16C9 12.13 12.13 9 16 9s7 3.13 7 7-3.13 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
                 <circle cx="16" cy="16" r="3" fill="white" opacity="0.7"/>
@@ -2489,7 +2503,7 @@ input, textarea, select { font-family: inherit; }
       <button class="modal-close" id="modalClose" aria-label="Close modal">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <div class="modal-icon">🚀</div>
+      <!-- <div class="modal-icon">🚀</div> -->
       <h3 id="modalTitle" class="modal-title">Ready to Get Started?</h3>
       <p class="modal-desc">Great choice! Let's connect and bring your vision to life. How would you like to proceed?</p>
       <div class="modal-plan-info" id="modalPlanInfo"></div>
