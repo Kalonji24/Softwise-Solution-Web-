@@ -218,11 +218,9 @@ input, textarea, select { font-family: inherit; }
   flex-shrink: 0; 
 }
 
-.logo-icon { 
+/* .logo-icon { 
 
-
-
-}
+} */
 
 .logo-text { 
   display: flex; 
@@ -574,8 +572,9 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   padding: 32px; overflow: hidden;
 }
 .svc-visual-overlay {
+  display: none;
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(21,101,192,0.45) 0%, rgba(13,33,55,0.82) 100%);
+  background: linear-gradient(160deg, rgba(21,101,192,0.15) 0%, rgba(13,33,55,0.35) 100%);
 }
 .svc-visual-pattern {
   position: absolute; inset: 0; opacity: 0.07;
@@ -621,16 +620,31 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   padding: 36px 32px 32px;
   overflow-y: auto; max-height: 90vh;
 }
+
 .svc-close {
-  position: absolute; top: 16px; right: 16px;
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,0.15);
+  position: absolute;
+  top: 34px;
+  right: 475px;
+  width: 36px;
+  height: 36px;
+  background: white;
   border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: white; border: none; cursor: pointer; z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
   transition: background 0.2s;
 }
-.svc-close:hover { background: rgba(255,255,255,0.3); }
+
+.svc-close:hover { 
+  background: var(--gray-100); 
+}
+
+
 
 .svc-desc { font-size: 0.93rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 24px; }
 
@@ -758,7 +772,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#process" class="nav-link">Process</a></li>
-        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#why-us" class="nav-link">About Us</a></li>
         <li><a href="#team" class="nav-link">Team</a></li>
         <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -829,6 +843,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
           <h3>Websites Applications</h3>
           <p>We build fast and easy-to-use websites that help turn visitors into customers.</p>
           <a class="service-link" data-service="website">Learn more <span>→</span></a>
+          
         </div>
 
         <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-service="software">
@@ -1457,14 +1472,16 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 
   <!-- ========== SERVICE DETAIL MODAL ========== -->
   <div class="svc-overlay" id="svcOverlay" role="dialog" aria-modal="true">
-    <div class="svc-modal" id="svcModal">
-      <!-- Left visual panel -->
-      <div class="svc-visual" id="svcVisual">
-        <div class="svc-visual-overlay"></div>
-        <div class="svc-visual-pattern"></div>
-        <button class="svc-close" id="svcClose" aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+
+<button class="svc-close" id="svcClose" aria-label="Close">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+<div class="svc-modal" id="svcModal">
+  <!-- Left visual panel -->
+  <div class="svc-visual" id="svcVisual">
+    <div class="svc-visual-overlay"></div>
+    <div class="svc-visual-pattern"></div>
+
         <div class="svc-visual-content">
           <div class="svc-visual-icon" id="svcIcon"></div>
           <h2 id="svcTitle"></h2>
@@ -1678,6 +1695,7 @@ const SERVICE_DATA = {
   website: {
     title: 'Website Applications',
     tag: 'Web Development',
+    image:'/images/Web_1.png',
     gradient: 'linear-gradient(135deg, #1565C0, #42A5F5)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
     desc: 'We design and build fast, modern websites that look great on every device. Whether you need a simple business site or a full web application, we make it easy for visitors to find what they need — and turn them into paying customers.',
@@ -1692,6 +1710,7 @@ const SERVICE_DATA = {
   software: {
     title: 'Custom Software',
     tag: 'Software Engineering',
+    image:'/images/custom software.jpg',
     gradient: 'linear-gradient(135deg, #0F3460, #1565C0)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
     desc: 'Off-the-shelf software often doesn\'t fit the way your business really works. We build software that matches your exact processes — so your team spends less time fighting tools and more time getting things done.',
@@ -1706,6 +1725,7 @@ const SERVICE_DATA = {
   database: {
     title: 'Secure Databases',
     tag: 'Data Management',
+    image:'/images/database.jpg',
     gradient: 'linear-gradient(135deg, #0D2137, #1976D2)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`,
     desc: 'Your data is one of your most valuable assets. We design database systems that keep your information safe, organised, and easy to access — whether you\'re storing customer records, inventory, or financial data.',
@@ -1720,6 +1740,7 @@ const SERVICE_DATA = {
   backend: {
     title: 'Scalable Backend',
     tag: 'Backend Engineering',
+    image:'/images/cloud services.jpg',
     gradient: 'linear-gradient(135deg, #1565C0, #0D2137)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>`,
     desc: 'The backend is the engine powering your app or website — handling all the logic, data processing, and connections to other services. We build backends that are reliable, fast, and ready to handle growth without slowing down or crashing.',
@@ -1734,6 +1755,7 @@ const SERVICE_DATA = {
   mobile: {
     title: 'Mobile Applications',
     tag: 'Mobile Development',
+    image:'/images/mobile.jpg',
     gradient: 'linear-gradient(135deg, #1976D2, #42A5F5)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     desc: 'We build mobile apps for both iPhone and Android from a single codebase — saving you time and money. Your app will feel native, load fast, and give your customers a smooth experience wherever they are.',
@@ -1748,6 +1770,7 @@ const SERVICE_DATA = {
   ai: {
     title: 'AI Integration',
     tag: 'Artificial Intelligence',
+    image:'/images/ai.jpg',
     gradient: 'linear-gradient(135deg, #0F3460, #2196F3)',
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 3"/><path d="M18 2l4 4-4 4"/><path d="M22 6h-8"/></svg>`,
     desc: 'AI isn\'t just for big tech companies anymore. We add AI features directly into your existing systems — like smart chatbots that handle customer questions, tools that automate repetitive tasks, or dashboards that spot trends in your own business data.',
@@ -1763,12 +1786,21 @@ const SERVICE_DATA = {
 
 function openSvcModal(key) {
   const data = SERVICE_DATA[key]; if (!data) return;
-  // Visual panel
-  $('#svcVisual').style.background = data.gradient;
+
+  const visual = $('#svcVisual');
+
+  // ✅ Set background image + gradient overlay together as one background property
+  if (data.image) {
+    visual.style.background = `url('${data.image}') center/cover no-repeat`;
+  } else {
+    visual.style.background = data.gradient;
+  }
+
+  // Remove the old broken lines — do NOT set backgroundImage and background separately
   $('#svcIcon').innerHTML = data.icon;
   $('#svcTitle').textContent = data.title;
   $('#svcTag').textContent = data.tag;
-  // Content
+
   $('#svcDesc').textContent = data.desc;
   $('#svcFeatures').innerHTML = data.features.map(f => `
     <div class="svc-feature">
@@ -1778,7 +1810,7 @@ function openSvcModal(key) {
       <div><h4>${f.title}</h4><p>${f.desc}</p></div>
     </div>`).join('');
   $('#svcTech').innerHTML = data.tech.map(t => `<span>${t}</span>`).join('');
-  // Show
+
   $('#svcOverlay').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
