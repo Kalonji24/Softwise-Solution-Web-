@@ -671,7 +671,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
     @media (min-width: 1400px) and (max-width: 1599px) {
         right: 168px;
         top: 10px;
-    }
+    } 
 
 
 }
@@ -684,7 +684,26 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 
 .svc-desc { font-size: 0.93rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 24px; }
 
-.svc-section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 10px; }
+.svc-section-label { 
+  
+  font-size: 0.7rem; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--gray-400); 
+  margin-bottom: 10px; 
+
+
+
+    @media (min-width: 0px) and (max-width: 374px) {
+       display:none;
+    }
+
+    @media (min-width: 375px) and (max-width: 575px) {
+        display:none;
+    }
+
+}
 
 .svc-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 .svc-feature {
@@ -704,7 +723,26 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 .svc-feature h4 { font-size: 0.83rem; font-weight: 700; color: var(--gray-900); margin-bottom: 2px; }
 .svc-feature p { font-size: 0.76rem; color: var(--gray-500); line-height: 1.5; }
 
-.svc-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+.svc-tech { 
+
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6px; 
+  margin-bottom: 28px;
+  
+    @media (min-width: 0px) and (max-width: 374px) {
+      display:none;
+    }
+
+    @media (min-width: 375px) and (max-width: 575px) {
+        display:none;
+    }
+
+
+  
+}
+
+
 .svc-tech span { font-size: 0.72rem; font-weight: 600; color: var(--blue-700); background: var(--blue-50); border: 1px solid var(--blue-100); padding: 4px 10px; border-radius: 100px; }
 
 .svc-cta { margin-top: auto; }
