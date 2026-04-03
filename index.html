@@ -743,17 +743,24 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
     flex-shrink: 0;
     padding: 24px 20px;
   }
-  .svc-visual h2 { font-size: 1.3rem; }
+  .svc-visual h2 { 
+    font-size: 1.3rem; 
+  }
+
   .svc-content {
     flex: 1;
     overflow-y: auto;
     max-height: none;
-    padding: 20px 20px 24px;
+    padding: 20px 20px 10px;
     -webkit-overflow-scrolling: touch;
+
   }
+
+
   .svc-cta {
-    padding-top: 12px;
+    padding-top: 0px;
   }
+
 }
 
 /* ── Small phones (≤480px, iPhone SE, Galaxy S8, etc.) ── */
@@ -772,9 +779,11 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   }
   .svc-visual h2 { font-size: 1.15rem; }
   .svc-visual-tag { font-size: 0.65rem; }
+
   .svc-content {
     padding: 16px 16px 20px;
   }
+  
   .svc-desc {
     font-size: 0.85rem;
     line-height: 1.65;
@@ -861,7 +870,10 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   .footer-bottom { flex-direction: column; text-align: center; }
   .svc-modal { grid-template-columns: 1fr; max-height: 95vh; }
   .svc-visual { min-height: 200px; }
-  .svc-content { padding: 24px 20px 20px; }
+  .svc-content { 
+    padding: 10px 20px 20px; 
+  
+  }
 }
 
 @media (max-width: 480px) {
