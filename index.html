@@ -305,10 +305,19 @@ input, textarea, select { font-family: inherit; }
 .hero-content { position: relative; z-index: 1; }
 
 .hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 18px; background: white; border: 1px solid var(--blue-200);
-  border-radius: 100px; font-size: 0.82rem; font-weight: 600; color: var(--blue-700);
-  margin-bottom: 28px; box-shadow: var(--shadow-sm); animation: slideDown 0.6s ease both;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  padding: 8px 18px; 
+  background: white; 
+  border: 1px solid var(--blue-200);
+  border-radius: 100px; 
+  font-size: 0.82rem; 
+  font-weight: 600; 
+  color: var(--blue-700);
+  margin-bottom: 0px; 
+  box-shadow: var(--shadow-sm); 
+  animation: slideDown 0.6s ease both;
 }
 .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); animation: pulse 2s infinite; }
 
@@ -580,12 +589,14 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   position: absolute; inset: 0; opacity: 0.07;
   background-image: radial-gradient(circle, white 1px, transparent 1px);
   background-size: 28px 28px;
+
 }
+
+
 .svc-visual-content { 
   position: relative; 
   z-index: 1; 
 }
-
 
 .svc-visual-icon {
   width: 64px; height: 64px;
@@ -594,7 +605,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   border-radius: var(--radius-md);
   display: flex; align-items: center; justify-content: center;
   color: white; margin-bottom: 16px;
-  backdrop-filter: blur(8px);
+  /*backdrop-filter: blur(8px);*/
   display: none;
 }
 
@@ -624,7 +635,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 .svc-close {
   position: absolute;
   top: 34px;
-  right: 475px;
+  right: 371px;
   width: 36px;
   height: 36px;
   background: white;
@@ -685,7 +696,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 .svc-desc { font-size: 0.93rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 24px; }
 
 .svc-section-label { 
-  
+  display: none;
   font-size: 0.7rem; 
   font-weight: 700; 
   letter-spacing: 0.12em; 
@@ -693,19 +704,15 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   color: var(--gray-400); 
   margin-bottom: 10px; 
 
-
-
-    @media (min-width: 0px) and (max-width: 374px) {
-       display:none;
-    }
-
-    @media (min-width: 375px) and (max-width: 575px) {
-        display:none;
-    }
-
 }
 
-.svc-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.svc-features { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  margin-bottom: 20px; 
+}
+
 .svc-feature {
   display: flex; align-items: flex-start; gap: 10px;
   padding: 11px 14px;
@@ -724,29 +731,41 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 .svc-feature p { font-size: 0.76rem; color: var(--gray-500); line-height: 1.5; }
 
 .svc-tech { 
-
-  display: flex; 
+  display: none; 
   flex-wrap: wrap; 
   gap: 6px; 
   margin-bottom: 28px;
-  
-    @media (min-width: 0px) and (max-width: 374px) {
-      display:none;
-    }
 
-    @media (min-width: 375px) and (max-width: 575px) {
-        display:none;
-    }
-
-
-  
 }
 
 
-.svc-tech span { font-size: 0.72rem; font-weight: 600; color: var(--blue-700); background: var(--blue-50); border: 1px solid var(--blue-100); padding: 4px 10px; border-radius: 100px; }
+.svc-tech span { 
+  font-size: 0.72rem; 
+  font-weight: 600; 
+  color: var(--blue-700); 
+  background: var(--blue-50); 
+  border: 1px solid var(--blue-100); 
+  padding: 4px 10px; 
+  border-radius: 100px; 
+}
 
-.svc-cta { margin-top: auto; }
-.svc-cta .btn { width: 100%; justify-content: center; font-size: 0.92rem; }
+.svc-cta { 
+  margin-top: auto; 
+}
+
+.svc-cta .btn { 
+  width: 100%; 
+  justify-content: center; 
+  font-size: 0.92rem;
+
+  @media (min-width: 0px) and (max-width: 374px) {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+
+
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1200px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
@@ -846,7 +865,7 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#process" class="nav-link">Process</a></li>
-        <li><a href="#why-us" class="nav-link">About Us</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
         <li><a href="#team" class="nav-link">Team</a></li>
         <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
