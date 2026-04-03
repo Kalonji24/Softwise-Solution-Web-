@@ -831,8 +831,16 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
 }
 
 @media (max-width: 768px) {
-  .section { padding: 72px 0; }
-  .container { padding: 0 16px; bottom: 90px; }
+  .section { 
+    padding: 72px 0; 
+  }
+
+
+  .container { 
+    padding: 0 16px; 
+    bottom: 0px; 
+  }
+
   .hamburger { display: flex; }
   .nav-links { position: fixed; inset: 0; top: 70px; background: white; flex-direction: column; align-items: stretch; padding: 24px 20px; gap: 4px; transform: translateX(100%); transition: transform var(--transition); overflow-y: auto; z-index: 999; border-top: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
   .nav-links.open { transform: translateX(0); height: fit-content; text-align: center; gap: 20px; }
