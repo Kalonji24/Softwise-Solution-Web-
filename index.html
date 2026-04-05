@@ -113,7 +113,13 @@ input, textarea, select { font-family: inherit; }
 .shape-3 { width: 300px; height: 300px; background: radial-gradient(circle, #E3F2FD, transparent 70%); top: 40%; left: 40%; animation: floatA 14s ease-in-out infinite reverse; }
 @keyframes floatA { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(30px,-30px) scale(1.05); } }
 @keyframes floatB { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-20px,20px) scale(1.03); } }
-.hero-content { position: relative; z-index: 1; }
+
+.hero-content { 
+  position: relative; 
+  z-index: 1; 
+  bottom: 55px;
+}
+
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: white; border: 1px solid var(--blue-200); border-radius: 100px; font-size: 0.82rem; font-weight: 600; color: var(--blue-700); margin-bottom: 0px; box-shadow: var(--shadow-sm); animation: slideDown 0.6s ease both; }
 .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); } }
@@ -1259,7 +1265,9 @@ a.social-link.instagram { background: radial-gradient(circle at 30% 107%, #fdf49
   <!-- ========== CHATBOT WINDOW ========== -->
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chat-header">
-      <div class="chat-header-avatar">🤖</div>
+      <div class="chat-header-avatar">
+        <img src="/images/logo_symbol.png" alt="SoftWise Assistant" style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin-left: 0px;"/>
+        </div>
       <div class="chat-header-info">
         <strong>SoftWise Assistant</strong>
         <span><span class="chat-online-dot"></span> Online — replies instantly</span>
