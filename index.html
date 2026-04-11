@@ -184,7 +184,22 @@ input,textarea,select{font-family:inherit}
 .stars{color:#F59E0B;font-size:.85rem;letter-spacing:2px;margin-bottom:12px}
 .testimonial-text{font-size:.88rem;color:var(--gray-600);line-height:1.7;font-style:italic;margin-bottom:20px;position:relative;z-index:1}
 .testimonial-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--gray-100)}
-.author-avatar{width:40px;height:40px;border-radius:50%;background:var(--gradient);color:white;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+
+.author-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--gradient);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.8rem;
+  font-weight:700;
+  flex-shrink:0
+}
+
+
 .testimonial-author strong{display:block;font-size:.85rem;font-weight:700;color:var(--gray-900)}
 .testimonial-author span{font-size:.75rem;color:var(--gray-500)}
 
@@ -271,7 +286,9 @@ a.social-link.instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%
 .chatbot-window{position:fixed;bottom:92px;right:24px;width:360px;max-height:520px;background:var(--white);border-radius:var(--radius-xl);box-shadow:0 20px 60px rgba(0,0,0,.18),0 4px 20px rgba(21,101,192,.12);z-index:899;display:flex;flex-direction:column;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(16px) scale(.97);transition:opacity .3s ease,transform .3s ease;border:1px solid var(--gray-200)}
 .chatbot-window.open{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
 .chat-header{background:var(--gradient);padding:16px 20px;display:flex;align-items:center;gap:12px;flex-shrink:0}
-.chat-header-avatar{width:38px;height:38px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.chat-header-avatar{
+  width:38px;height:38px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0
+}
 .chat-header-info strong{display:block;font-size:.92rem;font-weight:700;color:white}
 .chat-header-info span{font-size:.72rem;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:5px}
 .chat-online-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;display:inline-block}
@@ -558,17 +575,20 @@ a.social-link.instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%
         <div class="testimonial-card" data-aos="fade-up">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"SoftWise transformed our operations with a custom inventory system. We saved 15 hours per week and reduced errors by 80%. Truly game-changing."</p>
-          <div class="testimonial-author"><div class="author-avatar">TM</div><div><strong>Thabo Mokoena</strong><span>CEO, FreshStock Distributors</span></div></div>
+          <div class="testimonial-author"><div class="author-avatar"><img src="/images/thabo mokoena.png" alt="Thabo Mokoena" style="border-radius:50%;width:100%;height:100%;object-fit:cover;"/></div>
+          <div><strong>Thabo Mokoena</strong><span>CEO, FreshStock Distributors</span></div></div>
         </div>
         <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"The e-commerce platform they built tripled our online sales in six months. Their team understood our business needs from day one."</p>
-          <div class="testimonial-author"><div class="author-avatar">AN</div><div><strong>Amara Nkosi</strong><span>Founder, StyleHaus</span></div></div>
+          <div class="testimonial-author"><div class="author-avatar"><img src="/images/amara nkosi.png" alt="Amara Nkosi" style="border-radius:50%;width:100%;height:100%;object-fit:cover;"/></div>
+          <div><strong>Amara Nkosi</strong><span>Founder, StyleHaus</span></div></div>
         </div>
         <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"From concept to launch in 8 weeks. The analytics dashboard gives us real-time insights we never had before. Exceptional team and delivery."</p>
-          <div class="testimonial-author"><div class="author-avatar">SP</div><div><strong>Sarah Petersen</strong><span>COO, MediTrack Health</span></div></div>
+          <div class="testimonial-author"><div class="author-avatar"><img src="/images/sarah petersen.png" alt="Sarah Petersen" style="border-radius:50%;width:100%;height:100%;object-fit:cover;"/></div>
+          <div><strong>Sarah Petersen</strong><span>COO, MediTrack Health</span></div></div>
         </div>
       </div>
     </div>
@@ -877,7 +897,7 @@ a.social-link.instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%
 </button>
 <div class="chatbot-window" id="chatbotWindow">
   <div class="chat-header">
-    <div class="chat-header-avatar">💬</div>
+    <div class="chat-header-avatar"><img src="/images/logo_symbol.png" alt="SoftWise Assistant" style="border-radius:50%;width:100%;height:100%;object-fit:cover;"/></div>
     <div class="chat-header-info"><strong>SoftWise Assistant</strong><span><span class="chat-online-dot"></span> Online — replies instantly</span></div>
   </div>
   <div class="chat-messages" id="chatMessages">
@@ -1125,12 +1145,58 @@ $('#modalOverlay').addEventListener('click',e=>{if(e.target===$('#modalOverlay')
 
 /* ===== SERVICE MODAL ===== */
 const SERVICE_DATA={
-  website:{title:'Website Applications',tag:'Web Development',image:'/images/Web_1.png',desc:'We design and build fast, modern websites that look great on every device. Whether you need a simple business site or a full web application, we make it easy for visitors to find what they need — and turn them into paying customers.',features:[{title:'Responsive Design',desc:'Your site works perfectly on phones, tablets, and desktops — no pinching or zooming needed.'},{title:'Fast Loading',desc:"Optimised for speed so visitors don't click away before the page even loads."},{title:'SEO Ready',desc:'Built so Google and other search engines can find and rank your site easily.'},{title:'Easy to Update',desc:'We set up a simple dashboard so you can update content yourself, any time.'}]},
-  software:{title:'Custom Software',tag:'Software Engineering',image:'/images/custom software.jpg',desc:"Off-the-shelf software often doesn't fit the way your business really works. We build software that matches your exact processes.",features:[{title:'Built Around Your Business',desc:'We start by understanding exactly how you work, then build what you actually need.'},{title:'Grows with You',desc:"The software scales as your team and customer base expand — no need to start over."},{title:'Secure by Default',desc:"Your data and your clients' data are protected from day one."},{title:'Ongoing Support',desc:"We're available after launch to fix issues and add new features as your needs evolve."}]},
-  database:{title:'Secure Databases',tag:'Data Management',image:'/images/database.jpg',desc:"Your data is one of your most valuable assets. We design database systems that keep your information safe, organised, and easy to access.",features:[{title:'Bank-Level Encryption',desc:'Your data is encrypted so only authorised people can read or access it.'},{title:'POPIA Compliant',desc:"We make sure you meet South Africa's Protection of Personal Information Act requirements."},{title:'Fast Queries',desc:'Databases designed to return results quickly, even when handling millions of records.'},{title:'Automatic Backups',desc:'Your data is backed up regularly so you never lose it.'}]},
-  backend:{title:'Scalable Backend',tag:'Backend Engineering',image:'/images/cloud services.jpg',desc:"The backend is the engine powering your app or website. We build backends that are reliable, fast, and ready to handle growth.",features:[{title:'Handles High Traffic',desc:'Built to serve thousands of users at the same time without slowing down.'},{title:'API Integrations',desc:'Connect to payment gateways, CRMs, WhatsApp, and other third-party tools.'},{title:'Real-Time Features',desc:'Support for live notifications, in-app chat, and instant data updates.'},{title:'Cloud Hosted',desc:'Deployed on reliable cloud infrastructure with 99.9% uptime guarantee.'}]},
-  mobile:{title:'Mobile Applications',tag:'Mobile Development',image:'/images/mobile.jpg',desc:"We build mobile apps for both iPhone and Android from a single codebase — saving you time and money.",features:[{title:'iOS & Android',desc:'One app that works on both platforms, built at the same time — no double cost.'},{title:'Offline Support',desc:'Key features work even when the user has no internet connection.'},{title:'Push Notifications',desc:"Send updates, deals, and reminders directly to your users' phones."},{title:'App Store Ready',desc:'We handle the full submission process to Google Play and Apple App Store.'}]},
-  ai:{title:'AI Integration',tag:'Artificial Intelligence',image:'/images/ai.jpg',desc:"We add AI features directly into your existing systems — smart chatbots, task automation, or dashboards that spot trends in your business data.",features:[{title:'AI Chatbots',desc:"A smart assistant that answers customer questions 24/7, without needing human help."},{title:'Task Automation',desc:'Automate repetitive work like sending emails, generating reports, or sorting data.'},{title:'Predictive Analytics',desc:'Spot trends and make smarter decisions using your own business data.'},{title:'Works with Your Tools',desc:'AI features plug into your existing software — no full system rebuild required.'}]},
+  website:{title:'Website Applications',
+  tag:'Web Development',
+  image:'/images/Web_1.png',
+  desc:'We design and build fast, modern websites that look great on every device. Whether you need a simple business site or a full web application, we make it easy for visitors to find what they need — and turn them into paying customers.',
+  features:[{title:'Responsive Design',desc:'Your site works perfectly on phones, tablets, and desktops — no pinching or zooming needed.'},{title:'Fast Loading',desc:"Optimised for speed so visitors don't click away before the page even loads."},{title:'SEO Ready',desc:'Built so Google and other search engines can find and rank your site easily.'},{title:'Easy to Update',desc:'We set up a simple dashboard so you can update content yourself, any time.'}
+  ]},
+
+  software:{
+    title:'Custom Software',
+    tag:'Software Engineering',
+    image:'/images/custom software.jpg',
+    desc:"Off-the-shelf software often doesn't fit the way your business really works. We build software that matches your exact processes.",
+    features:[{
+      title:'Built Around Your Business',
+      desc:'We start by understanding exactly how you work, then build what you actually need.'},{title:'Grows with You',desc:"The software scales as your team and customer base expand — no need to start over."},{title:'Secure by Default',desc:"Your data and your clients' data are protected from day one."},{title:'Ongoing Support',desc:"We're available after launch to fix issues and add new features as your needs evolve."}
+      ]},
+
+   database:{
+    title:'Secure Databases',
+    tag:'Data Management',
+    image:'/images/database.jpg',
+    desc:"Your data is one of your most valuable assets. We design database systems that keep your information safe, organised, and easy to access.",
+    features:[{title:'Bank-Level Encryption',desc:'Your data is encrypted so only authorised people can read or access it.'},{title:'POPIA Compliant',desc:"We make sure you meet South Africa's Protection of Personal Information Act requirements."},{title:'Fast Queries',desc:'Databases designed to return results quickly, even when handling millions of records.'},{title:'Automatic Backups',desc:'Your data is backed up regularly so you never lose it.'}
+    ]},
+
+  backend:{
+    title:'Scalable Backend',
+    tag:'Backend Engineering',
+    image:'/images/cloud services.jpg',
+    desc:"The backend is the engine powering your app or website. We build backends that are reliable, fast, and ready to handle growth.",
+    features:[{
+      title:'Handles High Traffic',desc:'Built to serve thousands of users at the same time without slowing down.'},{title:'API Integrations',desc:'Connect to payment gateways, CRMs, WhatsApp, and other third-party tools.'},{title:'Real-Time Features',desc:'Support for live notifications, in-app chat, and instant data updates.'},{title:'Cloud Hosted',desc:'Deployed on reliable cloud infrastructure with 99.9% uptime guarantee.'}
+      ]},
+
+  mobile:{
+    title:'Mobile Applications',
+    tag:'Mobile Development',
+    image:'/images/mobile.jpg',
+    desc:"We build mobile apps for both iPhone and Android from a single codebase — saving you time and money.",
+    features:[{
+      title:'iOS & Android',desc:'One app that works on both platforms, built at the same time — no double cost.'},{title:'Offline Support',desc:'Key features work even when the user has no internet connection.'},{title:'Push Notifications',desc:"Send updates, deals, and reminders directly to your users' phones."},{title:'App Store Ready',desc:'We handle the full submission process to Google Play and Apple App Store.'}
+      ]},
+
+  ai:{
+    title:'AI Integration',
+    tag:'Artificial Intelligence',
+    image:'/images/ai.jpg',
+    desc:"We add AI features directly into your existing systems — smart chatbots, task automation, or dashboards that spot trends in your business data.",
+    features:[{
+      title:'AI Chatbots',
+      desc:"A smart assistant that answers customer questions 24/7, without needing human help."},{title:'Task Automation',desc:'Automate repetitive work like sending emails, generating reports, or sorting data.'},{title:'Predictive Analytics',desc:'Spot trends and make smarter decisions using your own business data.'},{title:'Works with Your Tools',desc:'AI features plug into your existing software — no full system rebuild required.'}
+      ]},
 };
 function openSvcModal(key){
   const data=SERVICE_DATA[key];if(!data)return;
