@@ -4,6 +4,22 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>SoftWise Solutions</title>
+
+<!-- ================================================ -->
+<!-- Google tag (gtag.js) — GA4 ID: G-6J220BG2P5     -->
+<!-- ================================================ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J220BG2P5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6J220BG2P5', {
+    page_title: 'Home',
+    page_path: '/home'
+  });
+</script>
+<!-- ================================================ -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -983,6 +999,17 @@ function navigate(pageId){
     currentPage=pageId;
     updateNavDots();
     updateNavLinks();
+
+    /* ===== GA4: track virtual page view on every navigation ===== */
+    if(typeof gtag!=='undefined'){
+      gtag('event','page_view',{
+        page_title: PAGE_LABELS[pageId],
+        page_location: window.location.origin+'/#'+pageId,
+        page_path: '/'+pageId
+      });
+    }
+    /* =========================================================== */
+
   },280);
 }
 window.navigate=navigate;
@@ -1120,6 +1147,17 @@ $('#modalOverlay').addEventListener('click',e=>{if(e.target===$('#modalOverlay')
     e.preventDefault();
     if(!validateAll()){showToast('Please fill in all required fields correctly.','error');return;}
     const name=$('#name').value.trim(),email=$('#email').value.trim(),phone=$('#phone').value.trim(),company=$('#company').value.trim(),service=$('#service').value,message=$('#message').value.trim();
+
+    /* ===== GA4: track form submission ===== */
+    if(typeof gtag!=='undefined'){
+      gtag('event','generate_lead',{
+        event_category:'Contact Form',
+        event_label: service||'General',
+        value: 1
+      });
+    }
+    /* ====================================== */
+
     const emailSubject=encodeURIComponent(`Business Call Booking from ${name}`);
     const emailBody=encodeURIComponent(`Hello SoftWise Team,\n\nI would like to book a business call.\n\nName: ${name}\nEmail: ${email}\n${phone?`Phone: ${phone}\n`:''}${company?`Company: ${company}\n`:''}${service?`Service: ${service}\n`:''}\nProject Brief:\n${message}\n\nThank you.`);
     const waMsg=encodeURIComponent(`Hello SoftWise! My name is *${name}*. I'd like to book a business call.\n\nEmail: ${email}\n${phone?`Phone: ${phone}\n`:''}${company?`Company: ${company}\n`:''}${service?`Service interest: ${service}\n`:''}\nMessage: ${message}`);
